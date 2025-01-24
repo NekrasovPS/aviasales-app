@@ -1,0 +1,79 @@
+/* Filter section */
+.filter {
+  max-width: 232px;
+  width: 100%;
+  height: max-content;
+  background-color: #ffffff;
+  padding: 15px 0 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 0 20px 0 20px;
+  }
+
+  &__option {
+    display: flex;
+    font-size: 13px;
+    padding: 10px 20px 10px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+
+  &__option:hover {
+    background-color: #f1fcff;
+  }
+
+  /* Скрытие стандартного input */
+  &__option input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  /* Стили для кастомной коробки */
+  &__checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #9abbce;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  /* Отметка галочки при выборе */
+  &__checkbox::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 0;
+    width: 6px;
+    height: 12px;
+    border: solid #2196f3;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  /* Включение галочки при нажатии */
+  &__option input[type='checkbox']:checked + &__checkbox {
+    background-color: #ffffff;
+    border-color: #2196f3;
+  }
+
+  &__option input[type='checkbox']:checked + &__checkbox::after {
+    display: block;
+  }
+}

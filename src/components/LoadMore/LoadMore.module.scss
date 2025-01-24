@@ -1,0 +1,21 @@
+/* Load More Section */
+.loadMore {
+  text-align: center;
+
+  &__button {
+    width: 100%;
+    padding: 15px;
+    font-size: 12px;
+    background-color: #2196f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+
+  &__button:hover {
+    background-color: #0056b3;
+  }
+}
